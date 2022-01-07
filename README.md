@@ -1,4 +1,4 @@
-# gnl
+# Get Next Line
 
 ## Function that returns a line read from a file descriptor.
 
