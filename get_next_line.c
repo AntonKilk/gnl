@@ -6,7 +6,7 @@
 /*   By: akilk <akilk@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 11:13:38 by akilk             #+#    #+#             */
-/*   Updated: 2022/01/06 13:39:34 by akilk            ###   ########.fr       */
+/*   Updated: 2022/01/07 10:24:51 by akilk            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int	get_next_line(const int fd, char **line)
 	int			ret;
 	static char	*remainder[MAX_FD];
 
-	if (fd < 0 || fd >= 4096 || !line || BUFF_SIZE < 1)
+	if (fd < 0 || fd >= MAX_FD || !line || BUFF_SIZE < 1)
 		return (-1);
 	*line = ft_memalloc(1);
 	if (remainder[fd] == NULL)
